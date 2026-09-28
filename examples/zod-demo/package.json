@@ -1,0 +1,10 @@
+{
+  "name": "zod-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "probe": "node probe-v3-habits.mjs",
+    "signup": "node signup.mjs"
+  },
+  "dependencies": { "zod": "^4.0.0" }
+}

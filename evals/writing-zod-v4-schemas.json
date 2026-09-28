@@ -1,0 +1,27 @@
+[
+  {
+    "skills": ["writing-zod-v4-schemas"],
+    "query": "Add a Zod schema for a login form: email and password (min 8). Show a custom message when password is missing.",
+    "expected_behavior": [
+      "Uses z.email() rather than z.string().email()",
+      "Uses the error param (a string or function) and never message, required_error or invalid_type_error",
+      "Uses z.prettifyError or z.treeifyError if it formats errors"
+    ]
+  },
+  {
+    "skills": ["writing-zod-v4-schemas"],
+    "query": "Combine UserBase and AdminExtras schemas into one and reject unknown keys.",
+    "expected_behavior": [
+      "Uses .extend(AdminExtras.shape) instead of .merge()",
+      "Uses z.strictObject instead of .strict()"
+    ]
+  },
+  {
+    "skills": ["writing-zod-v4-schemas"],
+    "query": "Review this schema: z.string({ required_error: 'Name is required' })",
+    "expected_behavior": [
+      "States that required_error is silently ignored in Zod 4",
+      "Rewrites it with error: (iss) => iss.input === undefined ? ... : ..."
+    ]
+  }
+]

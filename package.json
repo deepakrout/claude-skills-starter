@@ -1,0 +1,16 @@
+{
+  "name": "claude-skills-starter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Two working Agent Skills for Claude (a simple npm-package skill and an advanced Capacitor plugin skill) plus a validator and token-budget tool.",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node tools/run-tests.mjs",
+    "validate": "node tools/validate-skill.mjs",
+    "budget": "node tools/token-budget.mjs skills/writing-zod-v4-schemas skills/maintaining-capacitor-plugins",
+    "check:plugin": "node skills/maintaining-capacitor-plugins/scripts/check_plugin.mjs",
+    "package": "bash tools/package-skill.sh"
+  }
+}

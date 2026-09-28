@@ -1,0 +1,31 @@
+[
+  {
+    "skills": ["maintaining-capacitor-plugins"],
+    "query": "Upgrade examples/echo-plugin-drifted to Capacitor 8 and bump it to 1.5.0.",
+    "files": ["examples/echo-plugin-drifted/"],
+    "expected_behavior": [
+      "Runs check_plugin.mjs before editing",
+      "Fixes all 7 reported problems across package.json, podspec, Package.swift and build.gradle",
+      "Changes s.version back to package['version'] instead of hard-coding 1.5.0",
+      "Re-runs the checker and reports PASS before finishing"
+    ]
+  },
+  {
+    "skills": ["maintaining-capacitor-plugins"],
+    "query": "Users say pod install fails with: No podspec found for CapacitorEcho. What is wrong?",
+    "files": ["examples/echo-plugin-drifted/"],
+    "expected_behavior": [
+      "Identifies the podspec missing from package.json files",
+      "Adds CapacitorEcho.podspec to files"
+    ]
+  },
+  {
+    "skills": ["maintaining-capacitor-plugins"],
+    "query": "Raise the Android minSdk of examples/echo-plugin to 26.",
+    "files": ["examples/echo-plugin/"],
+    "expected_behavior": [
+      "Edits only android/build.gradle",
+      "Notes the checker will flag 26 against the Capacitor 8 default of 24 and explains the trade-off"
+    ]
+  }
+]
