@@ -1,0 +1,25 @@
+{
+  "name": "capacitor-echo",
+  "version": "1.4.0",
+  "description": "Sample Capacitor 8 plugin used to exercise the maintaining-capacitor-plugins skill",
+  "license": "MIT",
+  "author": "Deepak Rout",
+  "repository": { "type": "git", "url": "https://github.com/deepakrout/claude-skills-starter.git" },
+  "main": "dist/plugin.cjs.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "files": [
+    "android/src/main/",
+    "android/build.gradle",
+    "dist/",
+    "ios/Sources",
+    "CapacitorEcho.podspec",
+    "Package.swift"
+  ],
+  "capacitor": {
+    "ios": { "src": "ios" },
+    "android": { "src": "android" }
+  },
+  "peerDependencies": { "@capacitor/core": ">=8.0.0" },
+  "devDependencies": { "@capacitor/core": "^8.0.0" }
+}
